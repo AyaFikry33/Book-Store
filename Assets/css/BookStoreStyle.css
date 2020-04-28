@@ -1,0 +1,46 @@
+/* General Styling */
+:root {
+  --main-color:#7068d8;
+  --main-dark-color:#0c1824;
+  --grey-color: #f1f1f1
+;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../textfont/Montserrat-Light.ttf");
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 100;
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=BookStoreStyle.css.map */
