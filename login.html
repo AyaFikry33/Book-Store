@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store System</title>
+    <!--link bootstrap file  -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- aos animation  -->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="Assets/css/all.min.css">
+    <!--  styling file  -->
+    <link rel="stylesheet" href="Assets/css/login.css">
+</head>
+<body>
+  <header>
+    <h2>BOOK STORE . . . </h2>
+  </header>
+
+  <form data-aos="fade-down" data-aos-duration="500">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+    </div>
+    <button type="submit" class="btn">Login</button>
+  </form>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- aos animation for form  -->
+  <script src="node_modules/aos/dist/aos.js"></script>
+  <!-- bootstrap  -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- script file -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

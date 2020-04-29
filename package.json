@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Database-Management-System-Project2020/Front-End#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0"
   }

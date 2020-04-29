@@ -1,0 +1,66 @@
+/* General Styling */
+:root{
+	--main-color:#7068d8;
+	--main-dark-color:#0c1824;	//rgb(12, 24, 36)
+	--grey-color: #f1f1f1
+}
+
+html{
+	box-sizing: border-box;
+}
+*, *:after, *:before{
+	box-sizing: inherit;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src:url('../textfont/Montserrat-Light.ttf');
+}
+body{
+	font-family: 'Montserrat';
+	margin: 0;
+    padding: 0;
+    background-color: rgba(12, 24, 36, .9);
+}
+ul{
+	list-style: none;
+	padding: 0;
+    margin: 0;
+}	
+a{
+	text-decoration: none;
+	font-weight: 100;
+	color: white
+}
+a:hover{
+	color: white;
+	text-decoration: none
+}
+
+/* form Styling*/
+header{
+	background-color: white;
+	h2{
+		color: var(--main-color);
+		font-weight: 900;
+		padding: 1rem;
+	}
+}
+form{
+	margin: auto;
+	width: 50%;
+	background-color: white;
+	padding: 2rem;
+	margin-top: 2rem;
+	font-weight: bold;
+	border-radius: 2px;
+	.btn{
+		background-color: var(--main-color);
+		color: white;
+		font-weight: bold;
+		margin-top: 1rem;
+		&:hover{
+			background-color: var(--main-dark-color);
+			color: white;
+		}
+	}
+}
