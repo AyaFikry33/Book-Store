@@ -76,61 +76,105 @@ header .logout button i {
 }
 
 /* Recurring , customer section style */
-.Recurring .container .header, .customer .container .header, .supplier .container .header {
+.Recurring .contain, .customer .contain, .supplier .contain {
+  padding: 0;
+  margin: 1rem 7rem;
+}
+
+.Recurring .contain .header, .customer .contain .header, .supplier .contain .header {
   padding: 1rem 0;
 }
 
-.Recurring .container .header h3, .customer .container .header h3, .supplier .container .header h3 {
+.Recurring .contain .header h3, .customer .contain .header h3, .supplier .contain .header h3 {
   display: inline-block;
   color: white;
 }
 
-.Recurring .container .header .editbar, .customer .container .header .editbar, .supplier .container .header .editbar {
+.Recurring .contain .header .editbar, .customer .contain .header .editbar, .supplier .contain .header .editbar {
   float: right;
 }
 
-.Recurring .container .header .editbar .btn, .customer .container .header .editbar .btn, .supplier .container .header .editbar .btn {
+.Recurring .contain .header .editbar .btn, .customer .contain .header .editbar .btn, .supplier .contain .header .editbar .btn {
   background-color: var(--main-color);
   color: white;
   padding: .5rem 1rem;
 }
 
-.Recurring .container .header .editbar .btn i, .customer .container .header .editbar .btn i, .supplier .container .header .editbar .btn i {
+.Recurring .contain .header .editbar .btn i, .customer .contain .header .editbar .btn i, .supplier .contain .header .editbar .btn i {
   font-size: .85rem;
 }
 
-.Recurring .container .header .editbar button.add, .customer .container .header .editbar button.add, .supplier .container .header .editbar button.add {
+.Recurring .contain .header .editbar button.add, .customer .contain .header .editbar button.add, .supplier .contain .header .editbar button.add {
   margin-right: .5rem;
 }
 
-.Recurring .container .content table, .customer .container .content table, .supplier .container .content table {
-  color: white;
-  margin-top: 1rem;
+.Recurring .contain .content, .customer .contain .content, .supplier .contain .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.Recurring .container .content table tbody tr th, .Recurring .container .content table tbody tr td, .customer .container .content table tbody tr th, .customer .container .content table tbody tr td, .supplier .container .content table tbody tr th, .supplier .container .content table tbody tr td {
+.Recurring .contain .content table, .customer .contain .content table, .supplier .contain .content table {
+  color: white;
+  margin-top: 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+}
+
+.Recurring .contain .content table tbody tr th, .Recurring .contain .content table tbody tr td, .Recurring .contain .content table thead tr th, .Recurring .contain .content table thead tr td, .customer .contain .content table tbody tr th, .customer .contain .content table tbody tr td, .customer .contain .content table thead tr th, .customer .contain .content table thead tr td, .supplier .contain .content table tbody tr th, .supplier .contain .content table tbody tr td, .supplier .contain .content table thead tr th, .supplier .contain .content table thead tr td {
   border: 1px solid white;
   padding: 1rem .5rem;
 }
 
-.Recurring .container .content table tbody tr td:nth-child(1), .customer .container .content table tbody tr td:nth-child(1), .supplier .container .content table tbody tr td:nth-child(1) {
+.Recurring .contain .content table tbody tr td:nth-child(1), .Recurring .contain .content table thead tr td:nth-child(1), .customer .contain .content table tbody tr td:nth-child(1), .customer .contain .content table thead tr td:nth-child(1), .supplier .contain .content table tbody tr td:nth-child(1), .supplier .contain .content table thead tr td:nth-child(1) {
   width: 2%;
 }
 
-.Recurring .container .content table tbody tr td:last-child, .customer .container .content table tbody tr td:last-child, .supplier .container .content table tbody tr td:last-child {
+.Recurring .contain .content table tbody tr td:last-child, .Recurring .contain .content table thead tr td:last-child, .customer .contain .content table tbody tr td:last-child, .customer .contain .content table thead tr td:last-child, .supplier .contain .content table tbody tr td:last-child, .supplier .contain .content table thead tr td:last-child {
   text-align: right;
 }
 
-.Recurring .container .content table tbody tr td button.edit, .customer .container .content table tbody tr td button.edit, .supplier .container .content table tbody tr td button.edit {
+.Recurring .contain .content table tbody tr td button.edit, .Recurring .contain .content table thead tr td button.edit, .customer .contain .content table tbody tr td button.edit, .customer .contain .content table thead tr td button.edit, .supplier .contain .content table tbody tr td button.edit, .supplier .contain .content table thead tr td button.edit {
   background-color: white;
 }
 
-.Recurring .container .content table tbody tr td button.edit i, .customer .container .content table tbody tr td button.edit i, .supplier .container .content table tbody tr td button.edit i {
+.Recurring .contain .content table tbody tr td button.edit i, .Recurring .contain .content table thead tr td button.edit i, .customer .contain .content table tbody tr td button.edit i, .customer .contain .content table thead tr td button.edit i, .supplier .contain .content table tbody tr td button.edit i, .supplier .contain .content table thead tr td button.edit i {
   color: var(--main-dark-color);
 }
 
-.Recurring .container .content table tbody tr .action, .customer .container .content table tbody tr .action, .supplier .container .content table tbody tr .action {
+.Recurring .contain .content table tbody tr .action, .Recurring .contain .content table thead tr .action, .customer .contain .content table tbody tr .action, .customer .contain .content table thead tr .action, .supplier .contain .content table tbody tr .action, .supplier .contain .content table thead tr .action {
   text-align: right;
+}
+
+.Recurring .contain .content .filter, .customer .contain .content .filter, .supplier .contain .content .filter {
+  margin: 1rem 0 0 1rem;
+  background-color: white;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.Recurring .contain .content .filter h4, .customer .contain .content .filter h4, .supplier .contain .content .filter h4 {
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: .05rem;
+}
+
+.Recurring .contain .content .filter h4 i, .customer .contain .content .filter h4 i, .supplier .contain .content .filter h4 i {
+  display: inline-block;
+  font-size: .85rem;
+}
+
+.Recurring .contain .content .filter input, .customer .contain .content .filter input, .supplier .contain .content .filter input {
+  width: 94%;
+  margin: 1rem 3%;
 }
 
 .Recurring {

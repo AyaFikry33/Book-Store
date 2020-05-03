@@ -63,7 +63,9 @@ header{
 
 /* Recurring , customer section style */
 .Recurring , .customer, .supplier{
-	.container{
+	.contain{
+		padding: 0;
+		margin: 1rem 7rem;
 		.header{
 			padding: 1rem 0 ;
 			h3{
@@ -86,10 +88,12 @@ header{
 			}
 		}
 		.content{
+			display: flex;
 			table{
 				color: white;
 				margin-top: 1rem;
-				tbody{
+				flex: 0 0 75%;
+				tbody, thead{
 					tr{
 						th , td{
 							border: 1px solid white;
@@ -113,6 +117,28 @@ header{
 							text-align: right;
 						}
 					}
+				}
+			}
+			.filter{
+				margin: 1rem 0 0 1rem;
+				background-color: white;
+				flex: 0 0 25%;
+				height: fit-content;
+				h4{
+					padding: 1rem;
+					background-color: var(--main-color);
+					color: white;
+					font-size: 1rem;
+					font-weight: bold;
+					letter-spacing: .05rem;
+					i{
+						display: inline-block;
+						font-size: .85rem;
+					}
+				}
+				input{
+					width: 94%;
+					margin: 1rem 3% ;
 				}
 			}
 		}

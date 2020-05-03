@@ -1,23 +1,36 @@
 $(document).ready(function(){ 
-    var addbtn = document.getElementById("add");
-    var table = document.getElementsByTagName("table")[0]
-    addbtn.addEventListener("click", function(){
-        table.innerHTML += `<tr>
-                            <td><input type="checkbox"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                        </tr>`
-    })
-}); 
+    // navbar 
+    var a = document.querySelectorAll("nav .navbar-nav .nav-item a")
+    a.forEach(element => {
+        var linkAttrValue = element.getAttribute("link")
+        console.log(linkAttrValue);
+        element.addEventListener("click", function(e){
+            var x = e.target.getAttribute("link")
+            document.getElementById(x).style.display = "block";    
+        })
+    }); 
 
-var a = document.querySelectorAll("nav .navbar-nav .nav-item a")
-a.forEach(element => {
-    element.addEventListener("click", function(e){
-        var x = e.target.getAttribute("link")
-        document.getElementById(x).style.display = "block"
-    
-    })
+    // filtering recurring profiles 
+    $("#recurring-Input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#recurring-table tbody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+    // filtering customers 
+    $("#customer-Input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#customer-table tbody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+    // filtering suppliers 
+    $("#supplier-Input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#supplier-table tbody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 }); 
