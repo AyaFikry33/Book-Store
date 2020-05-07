@@ -11,10 +11,10 @@ html{
 *, *:after, *:before{
 	box-sizing: inherit;
 }
-@font-face{
-	font-family: 'Montserrat';
-	src:url('../textfont/Montserrat-Light.ttf');
-}
+// @font-face{
+// 	font-family: 'Montserrat', sans-serif;
+// 	// src:url('../textfont/Montserrat-Light.ttf');
+// }
 body{
 	font-family: 'Montserrat';
 	margin: 0;
@@ -36,6 +36,10 @@ a:hover{
 	color: white;
 	text-decoration: none
 }
+button:focus{
+	outline: none;
+}
+
 /* header style */
 header{
 	background-color: white;
@@ -54,15 +58,17 @@ header{
 		border-left: 2px solid var(--grey-color);
 		button{
 			font-weight: bold;
+			border: none;
 			i{
 				color:var(--main-color);
+				pointer-events: none;
 			}
 		}
 	}
 }
 
 /* Recurring , customer section style */
-.Recurring , .customer, .supplier{
+section, .edit-container{
 	.contain{
 		padding: 0;
 		margin: 1rem 7rem;
@@ -89,6 +95,29 @@ header{
 		}
 		.content{
 			display: flex;
+			
+			.filter{
+				margin: 1rem 1rem 0 0;
+				background-color: white;
+				flex: 0 0 25%;
+				height: fit-content;
+				h4{
+					padding: 1rem;
+					background-color: var(--main-color);
+					color: white;
+					font-size: 1rem;
+					font-weight: bold;
+					letter-spacing: .05rem;
+					i{
+						display: inline-block;
+						font-size: .85rem;
+					}
+				}
+				input{
+					width: 94%;
+					margin: 1rem 3% ;
+				}
+			}
 			table{
 				color: white;
 				margin-top: 1rem;
@@ -118,39 +147,87 @@ header{
 						}
 					}
 				}
-			}
-			.filter{
-				margin: 1rem 0 0 1rem;
-				background-color: white;
-				flex: 0 0 25%;
-				height: fit-content;
-				h4{
-					padding: 1rem;
-					background-color: var(--main-color);
-					color: white;
-					font-size: 1rem;
-					font-weight: bold;
-					letter-spacing: .05rem;
-					i{
-						display: inline-block;
-						font-size: .85rem;
+				tbody{
+					tr.deleted-element{
+						transition: all .5s ease-in-out;
+						opacity: 0;
 					}
 				}
-				input{
-					width: 94%;
-					margin: 1rem 3% ;
+			}
+			#Products{
+				background-color: unset;
+				flex: 0 0 75%;
+				margin: 1rem;
+				border: none;
+				padding: 0;
+				ul.ui-tabs-nav{
+					padding: 0;
+					background-color: unset;
+					border: none;
+					li{
+						border: none;
+						padding-right: 1rem;
+						margin-right: 1rem ;
+					}
+					li.ui-tabs-active{
+						background-color: var(--main-color);
+					}
+					
+				}
+				
+				#books, #tools{
+					padding:0;
+					table{
+						display: block;
+						img{
+							width: 50px;
+							height: 50px;
+						}
+					}
 				}
 			}
 		}
 	}
 }
 
-.Recurring{
-	display: none;
-}
-.customer{
+.customer, .Recurring, .supplier, .product, .Order{
  	display: none;
 }
-.supplier{
+.show {
+	display: inline-table;
+}
+
+
+//related to add.html page
+.edit-container{
+	form{
+		width: 100%;
+		border: 1px solid white;
+		margin-top: 2rem;
+		.form-group{
+			display: flex;
+			justify-content: space-around;
+			color: white;
+			border-bottom: 1px solid white;
+			padding: 1rem;
+			label{
+				line-height: 38px;
+				flex: 0 0 12%;
+			}
+			h5{
+				width: 100%;
+				i{
+					font-size: 1rem;
+					padding: 0 2rem 0 0; 
+				}
+			}
+		}
+	}
+
+}
+.edit-container form.show{
+	display: block;
+}
+.supplier-form , .customer-form, .recurring-form{
 	display: none;
 }

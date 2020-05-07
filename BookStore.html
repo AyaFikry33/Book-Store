@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Store System</title>
+    <!-- jquery ui  -->
+    <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.css">
+    <!-- google fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet"> 
     <!--link bootstrap file  -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- font awesome -->
-    <link rel="stylesheet" href="Assets/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!--  styling file  -->
     <link rel="stylesheet" href="Assets/css/BookStoreStyle.css">
+    <title>Book Store System</title>
+
 </head>
 <body>
 
   <!-- Header Structure  -->
   <header>
     <h2>BOOK STORE . . . </h2>
-    <div id="logout" class="logout"><button type="submit" class="btn">Log Out <i class="fas fa-sign-in-alt"></i> </button></div>
+    <div id="logout" class="logout"><button type="submit" class="btn logout">Log Out <i class="fas fa-sign-in-alt"></i> </button></div>
   </header>
 
   <!-- navbar structure  -->
@@ -24,214 +29,333 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Product </a>
+          <a class="nav-link" link="Products" href="#" >Product </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" link="Recurring" href="#">Recurring Profiles  </a>
+          <a class="nav-link" link="Recurring" href="#">Recurring Profiles </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" link="customer" href="#">Customers </a>
+          <a class="nav-link" link="Customer" href="#">Customers </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" link="supplier" href="#">Suppliers </a>
+          <a class="nav-link" link="Supplier" href="#">Suppliers </a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" link="Order" href="#">Orders </a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Recurring Section Structure  -->
-  <section class="Recurring" id="Recurring" >
+  <!-- Section container tables Structure  -->
+  <section>
     <div class="contain">
       <div class="header">
-        <h3>Recurring Profiles </h3>
+        <h3></h3>
         <div class="editbar">
-          <button type="button" class="btn add" id="add"><i class="fas fa-user-plus"></i></button>
-          <button type="button" class="btn delete" id="delete"><i class="fas fa-trash-alt"></i></button>
+          <button type="button" class="btn add" id="add" title="Add" ><i class="fas fa-user-plus"></i></button>
+          <button type="button" class="btn delete" id="delete" title="Delete"><i class="fas fa-trash-alt"></i></button>
         </div>
       </div>
-      <div class="content">
-        <table id="recurring-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Type</th>
-              <th>Name</th>
-              <th>ID</th>
-              <th>E-mail</th>
-              <th>Pages available</th>
-              <th class="action">Action </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>mon</td>
-              <td>Smith</td>
-              <td>50</td>
-              <td>smith33@gmail.com</td>
-              <td>Every thing</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>hom</td>
-              <td>Smith</td>
-              <td>52</td>
-              <td>ahmed@gmail.com</td>
-              <td>Every thing</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>dsf</td>
-              <td>Smith</td>
-              <td>53</td>
-              <td>eman22@gmail.com</td>
-              <td>Every thing</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>qwe</td>
-              <td>Smith</td>
-              <td>54</td>
-              <td>enas11@gmail.com</td>
-              <td>Every thing</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-          </tbody>
-        </table> 
 
-        <div class="filter" id="recurring-filter">
+      <div class="content"> 
+        
+        <div class="filter">
           <h4><i class="fas fa-filter"></i> Filterable Table</h4>
-          <input class="form-control" id="recurring-Input" type="text" placeholder="Search..">
-        </div>
+          <input class="form-control" id="filter-Input" type="text" placeholder="Search..">
+        </div> 
+
       </div>
     </div>
   </section>
 
-  <!-- Customer Section Structure  -->
-  <section class="customer" id="customer">
-    <div class="contain">
-      <div class="header">
-        <h3>Customer </h3>
-        <div class="editbar">
-          <button type="button" class="btn add" id="add"><i class="fas fa-user-plus"></i></button>
-          <button type="button" class="btn delete" id="delete"><i class="fas fa-trash-alt"></i></button>
-        </div>
-      </div>
-      <div class="content">
-        <table id="customer-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Start Date</th>
-              <th>End Date</th>
-              <th class="action">Action </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>10</td>
-              <td>15.36 EGP</td>
-              <td>11/2/2020</td>
-              <td>14/5/2020</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>10</td>
-              <td>140.36 EGP</td>
-              <td>11/2/2020</td>
-              <td>11/5/2020</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>10</td>
-              <td>120.36 EGP</td>
-              <td>11/2/2020</td>
-              <td>14/5/2020</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>10</td>
-              <td>170.36 EGP</td>
-              <td>11/2/2020</td>
-              <td>15/5/2020</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>10</td>
-              <td>120.36 EGP</td>
-              <td>11/2/2020</td>
-              <td>14/5/2020</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-          </tbody>
-        </table> 
-        <div class="filter" id="customer-filter">
-          <h4><i class="fas fa-filter"></i> Filterable Table</h4>
-          <input class="form-control" id="customer-Input" type="text" placeholder="Search..">
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- recurring table -->  
+  <table id="Recurring" class="table Recurring">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>ID</th>
+        <th>E-mail</th>
+        <th>Pages available</th>
+        <th class="action">Action </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>mon</td>
+        <td>Smith</td>
+        <td>50</td>
+        <td>smith33@gmail.com</td>
+        <td>Every thing</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>hom</td>
+        <td>Smith</td>
+        <td>52</td>
+        <td>ahmed@gmail.com</td>
+        <td>Every thing</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>bet</td>
+        <td>mohammed</td>
+        <td>52</td>
+        <td>aya@gmail.com</td>
+        <td>Every thing</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+    </tbody>
+  </table>
 
-  <!-- Suppliers Section Structure  -->
-  <section class="supplier" id="supplier">
-    <div class="contain">
-      <div class="header">
-        <h3>Suppliers </h3>
-        <div class="editbar">
-          <button type="button" class="btn add" id="add"><i class="fas fa-user-plus"></i></button>
-          <button type="button" class="btn delete" id="delete"><i class="fas fa-trash-alt"></i></button>
-        </div>
-      </div>
-      <div class="content">
-        <table id="supplier-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Discount</th>
-              <th>Deadline</th>
-              <th>ID</th>
-              <th>E-mail</th>
-              <th>Deal</th>
-              <th class="action">Action </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="checkbox"></td>
-              <td>10</td>
-              <td>120.36 EGP</td>
-              <td>11/2/2020</td>
-              <td>14/5/2020</td>
-              <td>14/5/2020</td>
-              <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
-            </tr>
-          </tbody>
-        </table> 
+  <!-- Customer table Structure  --> 
+  <table id="Customer" class="table customer">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th class="action">Action </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>10</td>
+        <td>15.36 EGP</td>
+        <td>11/2/2020</td>
+        <td>14/5/2020</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>10</td>
+        <td>140.36 EGP</td>
+        <td>11/2/2020</td>
+        <td>11/5/2020</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+    </tbody>
+  </table> 
 
-        <div class="filter" id="supplier-filter">
-          <h4><i class="fas fa-filter"></i> Filterable Table</h4>
-          <input class="form-control" id="supplier-Input" type="text" placeholder="Search..">
-        </div>
-      </div>
+  <!-- Suppliers table Structure  -->
+  <table id="Supplier" class="table supplier">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Discount</th>
+        <th>Deadline</th>
+        <th>ID</th>
+        <th>E-mail</th>
+        <th>Deal</th>
+        <th class="action">Action </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>10</td>
+        <td>120.36 EGP</td>
+        <td>11/2/2020</td>
+        <td>14/5/2020</td>
+        <td>14/5/2020</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+    </tbody>
+  </table> 
+
+  <!-- products table -->
+  <div id="Products" class="table product">
+    <ul>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#tools">Tools</a></li>
+    </ul>
+    <div id="books">
+      <table id="book-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Quantity</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>product ID</th>
+            <th class="action">Action </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>10</td>
+            <td><img src="Assets/imgs/book1.jpg" alt="Italian Trulli">
+            </td>
+            <td>140.36 EGP</td>
+            <td>11/2/2020</td>
+            <td>11/5/2020</td>
+            <td>010101022</td>
+            <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>10</td>
+            <td><img src="Assets/imgs/book1.jpg" alt="Italian Trulli">
+            </td>
+            <td>140.36 EGP</td>
+            <td>11/2/2020</td>
+            <td>11/5/2020</td>
+            <td>010101022</td>
+            <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+          </tr>
+        </tbody>
+      </table> 
     </div>
-  </section>
+    <div id="tools">
+      <table id="tools-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Quantity</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>product ID</th>
+            <th class="action">Action </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>10</td>
+            <td><img src="Assets/imgs/pen.jpg" alt="Italian Trulli">
+            </td>
+            <td>140.36 EGP</td>
+            <td>11/2/2020</td>
+            <td>11/5/2020</td>
+            <td>010101022</td>
+            <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- order table  -->
+  <table id="Order" class="table Order">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Customer ID</th>
+        <th>product </th>
+        <th>Total </th>
+        <th class="action">Action </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>10</td>
+        <td>
+          <table id="product-order" class="product-order">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th class="action">Action </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>Pen</td>
+                <td>12.36 EGP</td>
+                <td>5</td>
+                <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+              </tr>
+            </tbody>
+          </table> 
+        </td>
+        <td>57.00 EGP</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>10</td>
+        <td>
+          <table id="product-order" class="product-order">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th class="action">Action </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>Pen</td>
+                <td>12.36 EGP</td>
+                <td>5</td>
+                <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+              </tr>
+            </tbody>
+          </table> 
+        </td>
+        <td>57.00 EGP</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>10</td>
+        <td>
+          <table id="product-order" class="product-order">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th class="action">Action </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>Pen</td>
+                <td>12.36 EGP</td>
+                <td>5</td>
+                <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+              </tr>
+            </tbody>
+          </table> 
+        </td>
+        <td>57.00 EGP</td>
+        <td><button class="btn edit"><i class="fas fa-edit"></i></button></td>
+      </tr>
+    </tbody>
+  </table> 
 
   
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <script type="application/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>  
   <!-- bootstrap  -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jquery ui  -->
+  <script type="application/javascript" src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
   <!-- script file -->
-  <script src="Assets/js/BookStoreScript.js"></script>
+  <script type="application/javascript" src="Assets/js/BookStoreScript.js"></script>
 </body>
 </html>

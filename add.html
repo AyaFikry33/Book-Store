@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jquery ui  -->
+    <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.css">
+    <!-- google fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet"> 
+    <!--link bootstrap file  -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!--  styling file  -->
+    <link rel="stylesheet" href="Assets/css/BookStoreStyle.css">
+    <title>Book Store System</title>
+</head>
+<body>
+
+    <!-- Header Structure  -->
+    <header>
+        <h2>BOOK STORE . . . </h2>
+        <div id="logout" class="logout"><button type="submit" class="btn logout">Log Out <i class="fas fa-sign-in-alt"></i> </button></div>
+    </header>
+
+    <!-- navbar structure  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Product </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" link="Recurring" href="#">Recurring Profiles  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" link="customer" href="#">Customers </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" link="supplier" href="#">Suppliers </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- add section structure -->
+    <section class="edit-container">
+        <div class="contain">
+            <div class="header">
+                <h3>Recurring Profiles </h3>
+                <div class="editbar">
+                  <button type="submit" class="btn save" id="save" title="Save"><i class="fas fa-save"></i></button>
+                  <button type="button" class="btn return" id="return" title="Return"><a href="BookStore.html"><i class="fas fa-undo"></i></a></button>
+                </div>
+            </div>
+            <div class="content">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- add new recurring  -->
+    <form class="recurring-form" id="Recurring">
+      <div class="form-group" >
+          <h5><i class="fas fa-pen"></i> Recurring Profiles</h5>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Type</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Pages available</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </form>
+    
+    <!-- add new customer structure -->
+    <form class="customer-form" id="Customer">
+        <div class="form-group" >
+            <h5><i class="fas fa-pen"></i>Add New Customer </h5>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Quantity</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Price</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="price">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Start Date</label>
+          <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Start Date">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">End Date</label>
+          <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="End Date">
+        </div>
+    </form>
+
+    <!-- add new supplier structure  -->
+    <form class="supplier-form" id="Supplier">
+        <div class="form-group" >
+            <h5><i class="fas fa-pen"></i> Add New Supplier </h5>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Discount</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Discount">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Deadline </label>
+          <input type="date" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email </label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Deal </label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Deal">
+        </div>
+        
+    </form>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- bootstrap  -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script file -->
+    <script src="Assets/js/add.js"></script>
+</body>
+</html>

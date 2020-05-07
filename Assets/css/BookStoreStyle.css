@@ -16,11 +16,6 @@ html {
           box-sizing: inherit;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url("../textfont/Montserrat-Light.ttf");
-}
-
 body {
   font-family: 'Montserrat';
   margin: 0;
@@ -46,6 +41,10 @@ a:hover {
   text-decoration: none;
 }
 
+button:focus {
+  outline: none;
+}
+
 /* header style */
 header {
   background-color: white;
@@ -69,86 +68,55 @@ header .logout {
 
 header .logout button {
   font-weight: bold;
+  border: none;
 }
 
 header .logout button i {
   color: var(--main-color);
+  pointer-events: none;
 }
 
 /* Recurring , customer section style */
-.Recurring .contain, .customer .contain, .supplier .contain {
+section .contain, .edit-container .contain {
   padding: 0;
   margin: 1rem 7rem;
 }
 
-.Recurring .contain .header, .customer .contain .header, .supplier .contain .header {
+section .contain .header, .edit-container .contain .header {
   padding: 1rem 0;
 }
 
-.Recurring .contain .header h3, .customer .contain .header h3, .supplier .contain .header h3 {
+section .contain .header h3, .edit-container .contain .header h3 {
   display: inline-block;
   color: white;
 }
 
-.Recurring .contain .header .editbar, .customer .contain .header .editbar, .supplier .contain .header .editbar {
+section .contain .header .editbar, .edit-container .contain .header .editbar {
   float: right;
 }
 
-.Recurring .contain .header .editbar .btn, .customer .contain .header .editbar .btn, .supplier .contain .header .editbar .btn {
+section .contain .header .editbar .btn, .edit-container .contain .header .editbar .btn {
   background-color: var(--main-color);
   color: white;
   padding: .5rem 1rem;
 }
 
-.Recurring .contain .header .editbar .btn i, .customer .contain .header .editbar .btn i, .supplier .contain .header .editbar .btn i {
+section .contain .header .editbar .btn i, .edit-container .contain .header .editbar .btn i {
   font-size: .85rem;
 }
 
-.Recurring .contain .header .editbar button.add, .customer .contain .header .editbar button.add, .supplier .contain .header .editbar button.add {
+section .contain .header .editbar button.add, .edit-container .contain .header .editbar button.add {
   margin-right: .5rem;
 }
 
-.Recurring .contain .content, .customer .contain .content, .supplier .contain .content {
+section .contain .content, .edit-container .contain .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.Recurring .contain .content table, .customer .contain .content table, .supplier .contain .content table {
-  color: white;
-  margin-top: 1rem;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
-}
-
-.Recurring .contain .content table tbody tr th, .Recurring .contain .content table tbody tr td, .Recurring .contain .content table thead tr th, .Recurring .contain .content table thead tr td, .customer .contain .content table tbody tr th, .customer .contain .content table tbody tr td, .customer .contain .content table thead tr th, .customer .contain .content table thead tr td, .supplier .contain .content table tbody tr th, .supplier .contain .content table tbody tr td, .supplier .contain .content table thead tr th, .supplier .contain .content table thead tr td {
-  border: 1px solid white;
-  padding: 1rem .5rem;
-}
-
-.Recurring .contain .content table tbody tr td:nth-child(1), .Recurring .contain .content table thead tr td:nth-child(1), .customer .contain .content table tbody tr td:nth-child(1), .customer .contain .content table thead tr td:nth-child(1), .supplier .contain .content table tbody tr td:nth-child(1), .supplier .contain .content table thead tr td:nth-child(1) {
-  width: 2%;
-}
-
-.Recurring .contain .content table tbody tr td:last-child, .Recurring .contain .content table thead tr td:last-child, .customer .contain .content table tbody tr td:last-child, .customer .contain .content table thead tr td:last-child, .supplier .contain .content table tbody tr td:last-child, .supplier .contain .content table thead tr td:last-child {
-  text-align: right;
-}
-
-.Recurring .contain .content table tbody tr td button.edit, .Recurring .contain .content table thead tr td button.edit, .customer .contain .content table tbody tr td button.edit, .customer .contain .content table thead tr td button.edit, .supplier .contain .content table tbody tr td button.edit, .supplier .contain .content table thead tr td button.edit {
-  background-color: white;
-}
-
-.Recurring .contain .content table tbody tr td button.edit i, .Recurring .contain .content table thead tr td button.edit i, .customer .contain .content table tbody tr td button.edit i, .customer .contain .content table thead tr td button.edit i, .supplier .contain .content table tbody tr td button.edit i, .supplier .contain .content table thead tr td button.edit i {
-  color: var(--main-dark-color);
-}
-
-.Recurring .contain .content table tbody tr .action, .Recurring .contain .content table thead tr .action, .customer .contain .content table tbody tr .action, .customer .contain .content table thead tr .action, .supplier .contain .content table tbody tr .action, .supplier .contain .content table thead tr .action {
-  text-align: right;
-}
-
-.Recurring .contain .content .filter, .customer .contain .content .filter, .supplier .contain .content .filter {
-  margin: 1rem 0 0 1rem;
+section .contain .content .filter, .edit-container .contain .content .filter {
+  margin: 1rem 1rem 0 0;
   background-color: white;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
@@ -158,7 +126,7 @@ header .logout button i {
   height: fit-content;
 }
 
-.Recurring .contain .content .filter h4, .customer .contain .content .filter h4, .supplier .contain .content .filter h4 {
+section .contain .content .filter h4, .edit-container .contain .content .filter h4 {
   padding: 1rem;
   background-color: var(--main-color);
   color: white;
@@ -167,25 +135,140 @@ header .logout button i {
   letter-spacing: .05rem;
 }
 
-.Recurring .contain .content .filter h4 i, .customer .contain .content .filter h4 i, .supplier .contain .content .filter h4 i {
+section .contain .content .filter h4 i, .edit-container .contain .content .filter h4 i {
   display: inline-block;
   font-size: .85rem;
 }
 
-.Recurring .contain .content .filter input, .customer .contain .content .filter input, .supplier .contain .content .filter input {
+section .contain .content .filter input, .edit-container .contain .content .filter input {
   width: 94%;
   margin: 1rem 3%;
 }
 
-.Recurring {
+section .contain .content table, .edit-container .contain .content table {
+  color: white;
+  margin-top: 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+}
+
+section .contain .content table tbody tr th, section .contain .content table tbody tr td, section .contain .content table thead tr th, section .contain .content table thead tr td, .edit-container .contain .content table tbody tr th, .edit-container .contain .content table tbody tr td, .edit-container .contain .content table thead tr th, .edit-container .contain .content table thead tr td {
+  border: 1px solid white;
+  padding: 1rem .5rem;
+}
+
+section .contain .content table tbody tr td:nth-child(1), section .contain .content table thead tr td:nth-child(1), .edit-container .contain .content table tbody tr td:nth-child(1), .edit-container .contain .content table thead tr td:nth-child(1) {
+  width: 2%;
+}
+
+section .contain .content table tbody tr td:last-child, section .contain .content table thead tr td:last-child, .edit-container .contain .content table tbody tr td:last-child, .edit-container .contain .content table thead tr td:last-child {
+  text-align: right;
+}
+
+section .contain .content table tbody tr td button.edit, section .contain .content table thead tr td button.edit, .edit-container .contain .content table tbody tr td button.edit, .edit-container .contain .content table thead tr td button.edit {
+  background-color: white;
+}
+
+section .contain .content table tbody tr td button.edit i, section .contain .content table thead tr td button.edit i, .edit-container .contain .content table tbody tr td button.edit i, .edit-container .contain .content table thead tr td button.edit i {
+  color: var(--main-dark-color);
+}
+
+section .contain .content table tbody tr .action, section .contain .content table thead tr .action, .edit-container .contain .content table tbody tr .action, .edit-container .contain .content table thead tr .action {
+  text-align: right;
+}
+
+section .contain .content table tbody tr.deleted-element, .edit-container .contain .content table tbody tr.deleted-element {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  opacity: 0;
+}
+
+section .contain .content #Products, .edit-container .contain .content #Products {
+  background-color: unset;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  margin: 1rem;
+  border: none;
+  padding: 0;
+}
+
+section .contain .content #Products ul.ui-tabs-nav, .edit-container .contain .content #Products ul.ui-tabs-nav {
+  padding: 0;
+  background-color: unset;
+  border: none;
+}
+
+section .contain .content #Products ul.ui-tabs-nav li, .edit-container .contain .content #Products ul.ui-tabs-nav li {
+  border: none;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
+section .contain .content #Products ul.ui-tabs-nav li.ui-tabs-active, .edit-container .contain .content #Products ul.ui-tabs-nav li.ui-tabs-active {
+  background-color: var(--main-color);
+}
+
+section .contain .content #Products #books, section .contain .content #Products #tools, .edit-container .contain .content #Products #books, .edit-container .contain .content #Products #tools {
+  padding: 0;
+}
+
+section .contain .content #Products #books table, section .contain .content #Products #tools table, .edit-container .contain .content #Products #books table, .edit-container .contain .content #Products #tools table {
+  display: block;
+}
+
+section .contain .content #Products #books table img, section .contain .content #Products #tools table img, .edit-container .contain .content #Products #books table img, .edit-container .contain .content #Products #tools table img {
+  width: 50px;
+  height: 50px;
+}
+
+.customer, .Recurring, .supplier, .product, .Order {
   display: none;
 }
 
-.customer {
-  display: none;
+.show {
+  display: inline-table;
 }
 
-.supplier {
+.edit-container form {
+  width: 100%;
+  border: 1px solid white;
+  margin-top: 2rem;
+}
+
+.edit-container form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 1rem;
+}
+
+.edit-container form .form-group label {
+  line-height: 38px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12%;
+          flex: 0 0 12%;
+}
+
+.edit-container form .form-group h5 {
+  width: 100%;
+}
+
+.edit-container form .form-group h5 i {
+  font-size: 1rem;
+  padding: 0 2rem 0 0;
+}
+
+.edit-container form.show {
+  display: block;
+}
+
+.supplier-form, .customer-form, .recurring-form {
   display: none;
 }
 /*# sourceMappingURL=BookStoreStyle.css.map */
