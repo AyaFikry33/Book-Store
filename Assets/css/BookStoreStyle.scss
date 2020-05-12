@@ -11,10 +11,6 @@ html{
 *, *:after, *:before{
 	box-sizing: inherit;
 }
-// @font-face{
-// 	font-family: 'Montserrat', sans-serif;
-// 	// src:url('../textfont/Montserrat-Light.ttf');
-// }
 body{
 	font-family: 'Montserrat';
 	margin: 0;
@@ -39,7 +35,31 @@ a:hover{
 button:focus{
 	outline: none;
 }
+/* End General Styling Page*/
 
+/* Start Login Page Styling*/
+form[action="BookStore.html"]{
+	margin: auto;
+	width: 50%;
+	background-color: white;
+	padding: 2rem;
+	margin-top: 2rem;
+	font-weight: bold;
+	border-radius: 2px;
+	.btn{
+		background-color: var(--main-color);
+		color: white;
+		font-weight: bold;
+		margin-top: 1rem;
+		&:hover{
+			background-color: var(--main-dark-color);
+			color: white;
+		}
+	}
+}
+/* End Login Page*/
+
+/* BookStoreHome Page*/
 /* header style */
 header{
 	background-color: white;
@@ -67,7 +87,6 @@ header{
 	}
 }
 
-/* Recurring , customer section style */
 section, .edit-container{
 	.contain{
 		padding: 0;
@@ -95,7 +114,8 @@ section, .edit-container{
 		}
 		.content{
 			display: flex;
-			
+			width: 100%;
+    		overflow: hidden;
 			.filter{
 				margin: 1rem 1rem 0 0;
 				background-color: white;
@@ -121,7 +141,7 @@ section, .edit-container{
 			table{
 				color: white;
 				margin-top: 1rem;
-				flex: 0 0 75%;
+				flex: 0 0 72%;
 				tbody, thead{
 					tr{
 						th , td{
@@ -141,6 +161,10 @@ section, .edit-container{
 									color: var(--main-dark-color);	
 								}
 							}
+							table#product-order{
+								width: 100%;
+								margin: auto;
+							}
 						}
 						.action{
 							text-align: right;
@@ -154,9 +178,9 @@ section, .edit-container{
 					}
 				}
 			}
-			#Products{
+			.product{
 				background-color: unset;
-				flex: 0 0 75%;
+				flex: 0 0 72%;
 				margin: 1rem;
 				border: none;
 				padding: 0;
@@ -174,7 +198,6 @@ section, .edit-container{
 					}
 					
 				}
-				
 				#books, #tools{
 					padding:0;
 					table{
@@ -189,16 +212,15 @@ section, .edit-container{
 		}
 	}
 }
-
 .customer, .Recurring, .supplier, .product, .Order{
  	display: none;
 }
 .show {
-	display: inline-table;
+	display: block;
 }
+/* End BookStoreHome Page*/
 
-
-//related to add.html page
+/* Start Add page */
 .edit-container{
 	form{
 		width: 100%;
@@ -222,12 +244,43 @@ section, .edit-container{
 				}
 			}
 		}
+		&.Order-form{
+			.form-group:nth-child(3){
+				flex-wrap: wrap;
+				.row{
+					flex: 0 0 100%;
+					margin-bottom: 1rem;
+					&.add-head{
+						display: flex;
+						justify-content: space-around;
+						i{
+							background-color: var(--main-color);
+							line-height: 40px;
+							padding: 0 1rem;
+							border-radius: 2px;
+							cursor: pointer;
+						}
+						p{
+							margin-bottom: 0;
+							line-height: 40px;
+						}
+					}
+				}
+			}
+		}
 	}
 
 }
 .edit-container form.show{
 	display: block;
 }
-.supplier-form , .customer-form, .recurring-form{
+.Supplier-form , .Customer-form, .recurring-form, .Order-form, .Products-form{
 	display: none;
 }
+form#Products{
+	input[type="file"]{
+		width: 100%;
+		margin: auto;
+	}
+}
+/* End Add page */

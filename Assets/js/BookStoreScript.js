@@ -14,6 +14,7 @@ $(document).ready(function(){
     deleteBtn.addEventListener("click", deleteElement) 
     addBtn.addEventListener("click", moveToAddPage)
     logoutBtn.addEventListener("click", logout)
+
     // functions 
 
     // navbar toggel between Elements
@@ -29,7 +30,6 @@ $(document).ready(function(){
                 }else{
                     
                     targetTable.classList.remove("show")
-                    content.appendChild(targetTable)
                 }
             })
         });
@@ -46,7 +46,6 @@ $(document).ready(function(){
     // delete customer, supplier, product, recurring profiles
     function deleteElement(Event){
         const checkInputs = document.querySelectorAll("input[type='checkbox']");
-        console.log(event.target);
         checkInputs.forEach(element => {
             if(element.checked){
                 element.parentElement.parentElement.remove()

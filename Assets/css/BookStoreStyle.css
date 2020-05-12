@@ -45,6 +45,32 @@ button:focus {
   outline: none;
 }
 
+/* End General Styling Page*/
+/* Start Login Page Styling*/
+form[action="BookStore.html"] {
+  margin: auto;
+  width: 50%;
+  background-color: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+form[action="BookStore.html"] .btn {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+form[action="BookStore.html"] .btn:hover {
+  background-color: var(--main-dark-color);
+  color: white;
+}
+
+/* End Login Page*/
+/* BookStoreHome Page*/
 /* header style */
 header {
   background-color: white;
@@ -76,7 +102,6 @@ header .logout button i {
   pointer-events: none;
 }
 
-/* Recurring , customer section style */
 section .contain, .edit-container .contain {
   padding: 0;
   margin: 1rem 7rem;
@@ -113,6 +138,8 @@ section .contain .content, .edit-container .contain .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 
 section .contain .content .filter, .edit-container .contain .content .filter {
@@ -149,8 +176,8 @@ section .contain .content table, .edit-container .contain .content table {
   color: white;
   margin-top: 1rem;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
+      -ms-flex: 0 0 72%;
+          flex: 0 0 72%;
 }
 
 section .contain .content table tbody tr th, section .contain .content table tbody tr td, section .contain .content table thead tr th, section .contain .content table thead tr td, .edit-container .contain .content table tbody tr th, .edit-container .contain .content table tbody tr td, .edit-container .contain .content table thead tr th, .edit-container .contain .content table thead tr td {
@@ -174,6 +201,11 @@ section .contain .content table tbody tr td button.edit i, section .contain .con
   color: var(--main-dark-color);
 }
 
+section .contain .content table tbody tr td table#product-order, section .contain .content table thead tr td table#product-order, .edit-container .contain .content table tbody tr td table#product-order, .edit-container .contain .content table thead tr td table#product-order {
+  width: 100%;
+  margin: auto;
+}
+
 section .contain .content table tbody tr .action, section .contain .content table thead tr .action, .edit-container .contain .content table tbody tr .action, .edit-container .contain .content table thead tr .action {
   text-align: right;
 }
@@ -184,41 +216,41 @@ section .contain .content table tbody tr.deleted-element, .edit-container .conta
   opacity: 0;
 }
 
-section .contain .content #Products, .edit-container .contain .content #Products {
+section .contain .content .product, .edit-container .contain .content .product {
   background-color: unset;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
+      -ms-flex: 0 0 72%;
+          flex: 0 0 72%;
   margin: 1rem;
   border: none;
   padding: 0;
 }
 
-section .contain .content #Products ul.ui-tabs-nav, .edit-container .contain .content #Products ul.ui-tabs-nav {
+section .contain .content .product ul.ui-tabs-nav, .edit-container .contain .content .product ul.ui-tabs-nav {
   padding: 0;
   background-color: unset;
   border: none;
 }
 
-section .contain .content #Products ul.ui-tabs-nav li, .edit-container .contain .content #Products ul.ui-tabs-nav li {
+section .contain .content .product ul.ui-tabs-nav li, .edit-container .contain .content .product ul.ui-tabs-nav li {
   border: none;
   padding-right: 1rem;
   margin-right: 1rem;
 }
 
-section .contain .content #Products ul.ui-tabs-nav li.ui-tabs-active, .edit-container .contain .content #Products ul.ui-tabs-nav li.ui-tabs-active {
+section .contain .content .product ul.ui-tabs-nav li.ui-tabs-active, .edit-container .contain .content .product ul.ui-tabs-nav li.ui-tabs-active {
   background-color: var(--main-color);
 }
 
-section .contain .content #Products #books, section .contain .content #Products #tools, .edit-container .contain .content #Products #books, .edit-container .contain .content #Products #tools {
+section .contain .content .product #books, section .contain .content .product #tools, .edit-container .contain .content .product #books, .edit-container .contain .content .product #tools {
   padding: 0;
 }
 
-section .contain .content #Products #books table, section .contain .content #Products #tools table, .edit-container .contain .content #Products #books table, .edit-container .contain .content #Products #tools table {
+section .contain .content .product #books table, section .contain .content .product #tools table, .edit-container .contain .content .product #books table, .edit-container .contain .content .product #tools table {
   display: block;
 }
 
-section .contain .content #Products #books table img, section .contain .content #Products #tools table img, .edit-container .contain .content #Products #books table img, .edit-container .contain .content #Products #tools table img {
+section .contain .content .product #books table img, section .contain .content .product #tools table img, .edit-container .contain .content .product #books table img, .edit-container .contain .content .product #tools table img {
   width: 50px;
   height: 50px;
 }
@@ -228,9 +260,11 @@ section .contain .content #Products #books table img, section .contain .content 
 }
 
 .show {
-  display: inline-table;
+  display: block;
 }
 
+/* End BookStoreHome Page*/
+/* Start Add page */
 .edit-container form {
   width: 100%;
   border: 1px solid white;
@@ -264,11 +298,51 @@ section .contain .content #Products #books table img, section .contain .content 
   padding: 0 2rem 0 0;
 }
 
+.edit-container form.Order-form .form-group:nth-child(3) {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.edit-container form.Order-form .form-group:nth-child(3) .row {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-bottom: 1rem;
+}
+
+.edit-container form.Order-form .form-group:nth-child(3) .row.add-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.edit-container form.Order-form .form-group:nth-child(3) .row.add-head i {
+  background-color: var(--main-color);
+  line-height: 40px;
+  padding: 0 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.edit-container form.Order-form .form-group:nth-child(3) .row.add-head p {
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
 .edit-container form.show {
   display: block;
 }
 
-.supplier-form, .customer-form, .recurring-form {
+.Supplier-form, .Customer-form, .recurring-form, .Order-form, .Products-form {
   display: none;
 }
+
+form#Products input[type="file"] {
+  width: 100%;
+  margin: auto;
+}
+
+/* End Add page */
 /*# sourceMappingURL=BookStoreStyle.css.map */
