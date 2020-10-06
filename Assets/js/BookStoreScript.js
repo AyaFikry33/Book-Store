@@ -28,7 +28,6 @@ $(document).ready(function(){
                     targetTable.classList.add("show")
                     content.appendChild(targetTable)
                 }else{
-                    
                     targetTable.classList.remove("show")
                 }
             })

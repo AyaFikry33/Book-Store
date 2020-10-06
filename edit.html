@@ -16,12 +16,201 @@
     <title>Book Store System</title>
 </head>
 <body>
-    
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- bootstrap  -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- script file -->
-    <script src="Assets/js/add.js"></script>
+  <!-- Header Structure  -->
+  <header>
+    <h2>BOOK STORE . . . </h2>
+    <div id="logout" class="logout"><button type="submit" class="btn logout">Log Out <i class="fas fa-sign-in-alt"></i> </button></div>
+  </header>
+
+    <!-- navbar structure  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Product </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" link="Recurring" href="#">Recurring Profiles </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" link="customer" href="#">Customers </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" link="supplier" href="#">Suppliers </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" link="Order" href="#">Orders </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- add section structure -->
+  <section class="edit-container">
+    <div class="contain">
+      <div class="header">
+        <h3>Recurring Profiles </h3>
+        <div class="editbar">
+          <button type="submit" class="btn save" id="save" title="Save"><i class="fas fa-save"></i></button>
+          <button type="button" class="btn return" id="return" title="Return"><a href="BookStore.html"><i class="fas fa-undo"></i></a></button>
+        </div>
+      </div>
+      <div class="content">
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- add new recurring  -->
+  <form class="recurring-form" id="Recurring">
+    <div class="form-group" >
+      <h5><i class="fas fa-pen"></i> Recurring Profiles</h5>
+    </div>
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" id="Name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="Email">Email address</label>
+      <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="Type">Type</label>
+      <select class="form-control" id="Type">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="Pages">Pages available</label>
+      <select class="form-control" id="Pages">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+  </form>
+    
+  <!-- add new customer structure -->
+  <form class="Customer-form" id="Customer">
+    <div class="form-group" >
+      <h5><i class="fas fa-pen"></i>Add New Customer </h5>
+    </div>
+    <div class="form-group">
+      <label >Quantity</label>
+      <input type="text" class="form-control" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label >Price</label>
+      <input type="text" class="form-control" placeholder="price">
+    </div>
+    <div class="form-group">
+      <label >Start Date</label>
+      <input type="date" class="form-control" placeholder="Start Date">
+    </div>
+    <div class="form-group">
+      <label >End Date</label>
+      <input type="date" class="form-control" placeholder="End Date">
+    </div>
+  </form>
+
+    <!-- add new supplier structure  -->
+  <form class="Products-form" id="Products">
+    <div class="form-group" >
+      <h5><i class="fas fa-pen"></i> Add New Product </h5>
+    </div>
+    <div class="form-group">
+      <label for="Quantity">Quantity</label>
+      <input type="number" class="form-control" id="Quantity" placeholder="Quantity">
+    </div>
+    <div class="form-group">
+      <label for="Image">Select Image</label>
+      <input type="file" class="form-control-file" id="Image">
+    </div>
+    <div class="form-group">
+      <label for="Price">Price</label>
+      <input type="text" class="form-control" id="Price" placeholder="Price">
+    </div>
+    <div class="form-group">
+      <label for="Start-Date">Start Date </label>
+      <input type="date" class="form-control" id="Start-Date" placeholder="Start Date">
+    </div>
+    <div class="form-group">
+      <label for="End-Date">End Date</label>
+      <input type="date" class="form-control" id="End-Date" placeholder="End Date">
+    </div>
+    <div class="form-group">
+      <label for="product-ID">product ID</label>
+      <input type="number" class="form-control" id="product-ID" placeholder="product ID">
+    </div>
+  </form>
+
+  <!-- add new supplier structure  -->
+  <form class="Order-form" id="Order">
+    <div class="form-group">
+      <h5><i class="fas fa-pen"></i> Add New Order </h5>
+    </div>
+    <div class="form-group">
+      <label for="Customer-ID">Customer ID</label>
+      <input type="number" class="form-control" id="Customer-ID" placeholder="ID">
+    </div>
+    <div class="form-group add">
+      <div class="row add-head">
+        <p>Product</p>
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Price">
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" placeholder="Quantity">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Total">Total </label>
+      <input type="text" class="form-control" id="Total" placeholder="Total">
+    </div>
+
+  </form>
+
+  <!-- add new supplier structure  -->
+  <form class="Supplier-form" id="Supplier">
+    <div class="form-group" >
+      <h5><i class="fas fa-pen"></i> Add New Supplier </h5>
+    </div>
+    <div class="form-group">
+      <label for="Discount">Discount</label>
+      <input type="number" class="form-control" placeholder="Discount"id="Discount">
+    </div>
+    <div class="form-group">
+      <label for="Deadline">Deadline </label>
+      <input type="date" class="form-control" id="Deadline">
+    </div>
+    <div class="form-group">
+      <label for="C-Email" >Email </label>
+      <input type="email" class="form-control" id="C-Email" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="Deal">Deal </label>
+      <input type="text" class="form-control" id="Deal" placeholder="Deal">
+    </div>
+  </form>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- bootstrap  -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- script file -->
+  <script src="Assets/js/add.js"></script>
 </body>
 </html>
